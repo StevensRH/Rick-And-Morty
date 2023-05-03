@@ -1,0 +1,18 @@
+.cont{
+    width: 300px;
+    height: 50px;
+    background: green;
+    border: none;
+    font-size: 10pt;
+    float: left;
+    color: #63717f;
+    /* -webkit-border-radius: 5px;
+    -moz-border-radius: 5px; */
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    ;
+  }
+  img{
+    border: 6px solid greengi ;
+  }

@@ -1,0 +1,12 @@
+.contenedor{
+    background-image: url(portal.jpg);
+    border: 2px solid green;
+    width: 40%;
+    height: 30%;
+    margin-left: 5px;
+    margin-top: 60px;
+    color: brown;
+    padding: 5px;
+
+    
+}
