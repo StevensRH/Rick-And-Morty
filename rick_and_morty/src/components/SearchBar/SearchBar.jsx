@@ -1,17 +1,18 @@
 import style from './SearchBar.module.css'
+import { useState } from 'react';
+
 const SearchBar = ({onSearch}) =>{
+   const [id, setId] = useState("");
+   const handleChange = (event) =>{
+setId(event.target.value)
+   };
    return (
-      
-      <div className={style.cont}> 
-         <span class="icon"><i class="fa fa-search"></i></span>
-         <input id='search'placeholder='Search...' type='search' />
-         <button  onClick={onSearch}>Agregar</button>
+     <div className={style.contenedor}> 
+         <input onChange={handleChange}className={style.input} id='search'placeholder='Search...' value={id} type='search' />
+         <button className={style.button}onClick={()=> onSearch(id)} >Agregar</button>
       </div>
-      
-   );
+      );
+   
 };
-{/* <i class="fa fa-search"></i>
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> */}
 
-
-export default SearchBar
+export default SearchBar;

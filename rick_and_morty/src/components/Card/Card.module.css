@@ -1,12 +1,59 @@
-.contenedor{
+.animate{
     background-image: url(portal.jpg);
-    border: 2px solid green;
+    /* border: 2px solid green; */
     width: 40%;
     height: 30%;
     margin-left: 5px;
     margin-top: 60px;
     color: brown;
     padding: 5px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	border: 4px solid rgb(255, 0, 0); /* Establece un borde rojo de 4px */
+	border-radius: 40px; /* Hace que el borde sea circular */
+	animation: animarBorde 5s infinite; /* Inicia la animación que cambia el color del borde cada 5 segundos */
+  }
+ 
 
-    
+
+.animate h2{
+	background-color: white;
+	height: auto;
+	width: 60%;
+	border-radius: 10px;
+	text-align: center;
+	
+
+}
+@keyframes animarBorde {
+	0%   { border-color: rgb(255, 0, 0); } /* Rojo */
+	25%  { border-color: rgb(255, 255, 0); } /* Amarillo */
+	50%  { border-color: rgb(0, 255, 0); } /* Verde */
+	75%  { border-color: rgb(0, 255, 255); } /* Cian */
+	100% { border-color: rgb(255, 0, 255); } /* Magenta */
+  }
+  
+  /* Establecer las propiedades del borde para la imagen */
+  img {
+	border: 4px solid rgb(255, 0, 0); /* Establece un borde rojo de 4px */
+	border-radius: 50%; /* Hace que el borde sea circular */
+	animation: animarBorde 5s infinite; /* Inicia la animación que cambia el color del borde cada 5 segundos */
+  }
+ .cerrar{
+	margin-left: 10px;
+    background-color: green;
+    width: 100px;
+    height: 30px;
+    border: none;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+    font-size: medium;
+    transition: all 0.4s ease-in-out;
+  border: 3px solid green;
+ }
+ .cerrar:hover{
+    background-color: #00800098;
+    cursor: pointer;
 }

@@ -1,6 +1,6 @@
 import Card from '../Card/Card.jsx';
 import style from './Cards.module.css'
-const Cards = ({characters}) =>{
+const Cards = ({characters, onClose}) =>{
    return ( 
     <div className={style.contenedor}>
         {
@@ -15,7 +15,7 @@ const Cards = ({characters}) =>{
              image = {char.image}
              origin = {char.origin.name}
              status = {char.status}
-             onClose={() => window.alert('Emulamos que se cierra la card')}
+             onClose = {onClose}
              />
              )
            })
@@ -24,4 +24,5 @@ const Cards = ({characters}) =>{
     </div>
 
    )};
+   
 export default Cards;
