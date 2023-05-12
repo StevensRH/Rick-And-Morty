@@ -19,7 +19,7 @@
 
 }
 .button:hover{
-    background-color: #00800098;
+    background-color: #000000;
     cursor: pointer;
 
 }
@@ -39,6 +39,6 @@
 
 }
 .input:hover{
-    background-color: #00800098;
+    background-color: #000000;
     cursor: pointer;
 }

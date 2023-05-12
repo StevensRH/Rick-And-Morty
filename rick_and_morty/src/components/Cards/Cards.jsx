@@ -4,17 +4,17 @@ const Cards = ({characters, onClose}) =>{
    return ( 
     <div className={style.contenedor}>
         {
-           characters.map((char)=>{
+           characters.map(({id, name, status, species, gender, origin, image})=>{
              return(
              <Card 
-             key = {char.id}
-             id = {char.id}
-             name = {char.name}
-             species = {char.species}
-             gender = {char.gender}
-             image = {char.image}
-             origin = {char.origin.name}
-             status = {char.status}
+             key = {id}
+             id = {id}
+             name = {name}
+             species = {species}
+             gender = {gender}
+             image = {image}
+             origin = {origin.name}
+             status = {status}
              onClose = {onClose}
              />
              )

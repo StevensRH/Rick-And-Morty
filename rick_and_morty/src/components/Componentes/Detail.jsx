@@ -33,19 +33,20 @@ import { Link } from 'react-router-dom';
 
 const Detail = ()=>{
     const {id} = useParams();
+    console.log(id)
     const [character, setCharacter] = useState({});
 
 
-useEffect(()=>{
-    axios(`https://rickandmortyapi.com/api/character/${id}`).then(({ data }) => {
-        if (data.name) {
-           setCharacter(data);
-        } else {
-           window.alert('No hay personajes con ese ID');
-        }
-     });
-     return setCharacter({});
-}, [id])
+    useEffect(() => {
+        axios(`https://rickandmortyapi.com/api/character/${id}`).then(({ data }) => {
+           if (data.name) {
+              setCharacter(data);
+           } else {
+              window.alert('No hay personajes con ese ID');
+           }
+        });
+        return setCharacter({});
+     }, [id]);
 
 
     return(
